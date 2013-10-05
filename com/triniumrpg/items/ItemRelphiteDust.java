@@ -1,15 +1,18 @@
-package TriniumRPG;
+package com.triniumrpg.items;
+
+import com.triniumrpg.TriniumRPG;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.item.ItemFood;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.Item;
 
-public class ItemBeefStew extends ItemFood{
+public class ItemRelphiteDust extends Item{
 
-	public ItemBeefStew(int id, int hunger, float saturation, boolean Food) {
-		super(id, hunger, saturation, Food);
-		
+	public ItemRelphiteDust(int par1) {
+		super(par1);
+		this.setCreativeTab(CreativeTabs.tabMaterials);
 	}
 	
 	@SideOnly(Side.CLIENT)
@@ -19,4 +22,3 @@ public class ItemBeefStew extends ItemFood{
 	}
 
 }
-

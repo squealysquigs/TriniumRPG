@@ -1,4 +1,20 @@
-package TriniumRPG;
+package com.triniumrpg;
+
+import com.triniumrpg.blocks.BlockAdminiumOre;
+import com.triniumrpg.blocks.BlockRelphiteFrame;
+import com.triniumrpg.blocks.BlockRelphiteOre;
+import com.triniumrpg.blocks.BlockRelphitePortal;
+import com.triniumrpg.blocks.BlockRelphiteStone;
+import com.triniumrpg.blocks.BlockRelphitianSoil;
+import com.triniumrpg.blocks.BlockRuniumOre;
+import com.triniumrpg.handlers.EventManager;
+import com.triniumrpg.items.ItemAdminiumIngot;
+import com.triniumrpg.items.ItemAdminiumSword;
+import com.triniumrpg.items.ItemBeefStew;
+import com.triniumrpg.items.ItemRelphiteDust;
+import com.triniumrpg.items.ItemRuniumIngot;
+import com.triniumrpg.items.ItemRuniumSword;
+import com.triniumrpg.provider.WorldProviderTriniumRPG;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -104,9 +120,9 @@ public class TriniumRPG {
 		relphiteOre = new BlockRelphiteOre(1107, Material.rock).setUnlocalizedName("relphiteOre").setHardness(3);
 		relphiteFrame = new BlockRelphiteFrame(1108, Material.rock).setUnlocalizedName("relphiteFrame").setHardness(1);
 		
+		
 		beefStew = new ItemBeefStew(7000, 10, 8, false).setUnlocalizedName("beefStew");
-		
-		
+				
 		adminiumIngot = new ItemAdminiumIngot(5101).setUnlocalizedName("adminiumIngot");
 		runiumIngot = new ItemRuniumIngot(5102).setUnlocalizedName("runiumIngot");
 		relphiteDust = new ItemRelphiteDust(5103).setUnlocalizedName("relphiteDust");

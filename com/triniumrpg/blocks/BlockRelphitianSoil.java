@@ -1,4 +1,6 @@
-package TriniumRPG;
+package com.triniumrpg.blocks;
+
+import com.triniumrpg.TriniumRPG;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;

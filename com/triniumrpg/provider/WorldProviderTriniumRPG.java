@@ -1,4 +1,6 @@
-package TriniumRPG;
+package com.triniumrpg.provider;
+
+import com.triniumrpg.TriniumRPG;
 
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.BiomeGenBase;

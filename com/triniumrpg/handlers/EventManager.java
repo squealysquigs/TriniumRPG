@@ -1,6 +1,8 @@
-package TriniumRPG;
+package com.triniumrpg.handlers;
 
 import java.util.Random;
+
+import com.triniumrpg.TriniumRPG;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;

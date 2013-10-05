@@ -1,4 +1,4 @@
-package TriniumRPG;
+package com.triniumrpg.provider;
 
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.CAVE;
 import static net.minecraftforge.event.terraingen.InitMapGenEvent.EventType.MINESHAFT;
@@ -13,6 +13,8 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 
 import java.util.List;
 import java.util.Random;
+
+import com.triniumrpg.TriniumRPG;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
@@ -40,7 +42,6 @@ import net.minecraftforge.event.Event.Result;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
-import TriniumRPG.TriniumRPG;
 
 public class ChunkProviderRelphite implements IChunkProvider
 {
