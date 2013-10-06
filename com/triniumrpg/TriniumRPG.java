@@ -2,13 +2,8 @@ package com.triniumrpg;
 
 import java.util.logging.Level;
 
-import com.triniumrpg.blocks.BlockAdminiumOre;
-import com.triniumrpg.blocks.BlockRelphiteFrame;
-import com.triniumrpg.blocks.BlockRelphiteOre;
 import com.triniumrpg.blocks.BlockRelphitePortal;
-import com.triniumrpg.blocks.BlockRelphiteStone;
 import com.triniumrpg.blocks.BlockRelphitianSoil;
-import com.triniumrpg.blocks.BlockRuniumOre;
 import com.triniumrpg.blocks.Blocks;
 import com.triniumrpg.handlers.ConfigHandler;
 import com.triniumrpg.handlers.EventManager;

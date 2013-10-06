@@ -26,34 +26,34 @@ public class Items {
 	public static void init() {
 		goldencoin = new TriniumItem(IDs.goldencoin_actual).setUnlocalizedName(Names.goldencoin_unlocalname).setTextureName(ModInfo.ID + ":" + Names.goldencoin_unlocalname);
 		
-		beefStew = new ItemBeefStew(7000, 10, 8, false).setUnlocalizedName("beefStew");
+		beefStew = new ItemBeefStew(IDs.beefStew_actual, 10, 8, false).setUnlocalizedName(Names.beefStew_unlocalname);
 		GameRegistry.registerItem(beefStew, beefStew.getUnlocalizedName());
 
-		adminiumIngot = new ItemAdminiumIngot(5101).setUnlocalizedName("adminiumIngot");
+		adminiumIngot = new ItemAdminiumIngot(IDs.adminiumIngot_actual).setUnlocalizedName(Names.adminiumIngot_unlocalname);
 		GameRegistry.registerItem(adminiumIngot, adminiumIngot.getUnlocalizedName());
-		runiumIngot = new ItemRuniumIngot(5102).setUnlocalizedName("runiumIngot");
+		runiumIngot = new ItemRuniumIngot(IDs.runiumIngot_actual).setUnlocalizedName(Names.runiumIngot_unlocalname);
 		GameRegistry.registerItem(runiumIngot, runiumIngot.getUnlocalizedName());
-		relphiteDust = new ItemRelphiteDust(5103).setUnlocalizedName("relphiteDust");
+		relphiteDust = new ItemRelphiteDust(IDs.relphiteDust_actual).setUnlocalizedName(Names.relphiteDust_unlocalname);
 		GameRegistry.registerItem(relphiteDust, relphiteDust.getUnlocalizedName());	
 		
-		adminiumSword = new ItemAdminiumSword(6002, ToolMaterials.ADMINIUMSWORD).setUnlocalizedName("adminiumSword");
+		adminiumSword = new ItemAdminiumSword(IDs.adminiumSword_actual, ToolMaterials.ADMINIUMSWORD).setUnlocalizedName(Names.adminiumSword_unlocalname);
 		GameRegistry.registerItem(adminiumSword, adminiumSword.getUnlocalizedName());
-		runiumSword = new ItemRuniumSword(6003, ToolMaterials.RUNIUMSWORD).setUnlocalizedName("runiumSword");
+		runiumSword = new ItemRuniumSword(IDs.runiumSword_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.runiumSword_unlocalname);
 		GameRegistry.registerItem(runiumSword, runiumSword.getUnlocalizedName());
 	}
 
 	public static void addNames() {
 		LanguageRegistry.addName(goldencoin, Names.goldencoin_name);
 		
-		LanguageRegistry.addName(beefStew, "Beef Stew");	
+		LanguageRegistry.addName(beefStew, Names.beefStew_name);	
 
 
-		LanguageRegistry.addName(adminiumIngot, "Adminium Ingot");
-		LanguageRegistry.addName(runiumIngot, "Runium Ingot");
-		LanguageRegistry.addName(relphiteDust, "Relphite Dust");
+		LanguageRegistry.addName(adminiumIngot, Names.adminiumIngot_name);
+		LanguageRegistry.addName(runiumIngot, Names.runiumIngot_name);
+		LanguageRegistry.addName(relphiteDust, Names.relphiteDust_name);
 		
-		LanguageRegistry.addName(adminiumSword, "Adminium Sword");
-		LanguageRegistry.addName(runiumSword, "Runium Sword");
+		LanguageRegistry.addName(adminiumSword, Names.adminiumSword_name);
+		LanguageRegistry.addName(runiumSword, Names.runiumSword_name);
 	}
 
 	public static void addRecipes() {

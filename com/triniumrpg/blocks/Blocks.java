@@ -2,6 +2,7 @@ package com.triniumrpg.blocks;
 
 import com.triniumrpg.TriniumRPG;
 import com.triniumrpg.items.Items;
+import com.triniumrpg.lib.IDs;
 import com.triniumrpg.lib.Names;
 
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -22,23 +23,23 @@ public class Blocks {
 
 	public static void init() {
 		//Ores------------------------------------------------------------------------------------------------------------
-        adminiumOre = new BlockAdminiumOre(1101, Material.rock).setUnlocalizedName("adminiumOre").setHardness(3);
+        adminiumOre = new TriniumBlock(IDs.adminiumOre_actual, Material.rock).setUnlocalizedName(Names.adminiumOre_unlocalname).setHardness(3).setStepSound(Block.soundStoneFootstep);
         GameRegistry.registerBlock(adminiumOre, adminiumOre.getUnlocalizedName());
-		runiumOre = new BlockRuniumOre(1102, Material.rock).setUnlocalizedName("runiumOre").setHardness(3);
+		runiumOre = new TriniumBlock(IDs.runiumOre_actual, Material.rock).setUnlocalizedName(Names.runiumOre_unlocalname).setHardness(3).setStepSound(Block.soundStoneFootstep);
 		GameRegistry.registerBlock(runiumOre, runiumOre.getUnlocalizedName());
-		relphiteOre = new BlockRelphiteOre(1107, Material.rock).setUnlocalizedName("relphiteOre").setHardness(3);
+		relphiteOre = new TriniumBlock(IDs.relphiteOre_actual, Material.rock).setUnlocalizedName(Names.relphiteOre_unlocalname).setHardness(3).setStepSound(Block.soundStoneFootstep);
 		GameRegistry.registerBlock(relphiteOre, relphiteOre.getUnlocalizedName());
 
 		//Functional------------------------------------------------------------------------------------------------------------
-		relphiteFrame = new BlockRelphiteFrame(1108, Material.rock).setUnlocalizedName("relphiteFrame").setHardness(1);				
+		relphiteFrame = new TriniumBlock(IDs.relphiteFrame_actual, Material.rock).setUnlocalizedName(Names.relphiteFrame_unlocalname).setHardness(1).setStepSound(Block.soundStoneFootstep);				
 		GameRegistry.registerBlock(relphiteFrame, relphiteFrame.getUnlocalizedName());
-		relphitePortal = new BlockRelphitePortal(251).setUnlocalizedName("relphitePortal");
+		relphitePortal = new BlockRelphitePortal(251).setUnlocalizedName(Names.relphitePortal_unlocalname);
 		GameRegistry.registerBlock(relphitePortal, relphitePortal.getUnlocalizedName());
 		
 		//Decoration------------------------------------------------------------------------------------------------------------
-		relphitianSoil = new BlockRelphitianSoil(253, Material.grass).setUnlocalizedName("relphitianSoil");
+		relphitianSoil = new TriniumBlock(IDs.relphitianSoil_actual, Material.grass).setUnlocalizedName(Names.relphitianSoil_unlocalname);
 		GameRegistry.registerBlock(relphitianSoil, relphitianSoil.getUnlocalizedName());
-		relphiteStone = new BlockRelphiteStone(254, Material.rock).setUnlocalizedName("relphiteStone").setHardness(3);
+		relphiteStone = new TriniumBlock(IDs.relphiteStone_actual, Material.rock).setUnlocalizedName(Names.relphiteStone_unlocalname).setHardness(30).setStepSound(Block.soundStoneFootstep);
 		GameRegistry.registerBlock(relphiteStone, relphiteStone.getUnlocalizedName()); 
 	}
 	
@@ -54,17 +55,17 @@ public class Blocks {
 
 	public static void addNames() {
 		//Ores------------------------------------------------------------------------------------------------------------
-		LanguageRegistry.addName(adminiumOre, "Adminium Ore");
-		LanguageRegistry.addName(runiumOre, "Runium Ore");
-		LanguageRegistry.addName(relphiteOre, "Relphite Ore");
+		LanguageRegistry.addName(adminiumOre, Names.adminiumOre_name);
+		LanguageRegistry.addName(runiumOre, Names.runiumOre_name);
+		LanguageRegistry.addName(relphiteOre, Names.relphiteOre_name);
 		
 		//Functional------------------------------------------------------------------------------------------------------------
-		LanguageRegistry.addName(relphitePortal, "Relphite Portal");
-		LanguageRegistry.addName(relphiteFrame, "Relphite Frame");
+		LanguageRegistry.addName(relphitePortal, Names.relphitePortal_name);
+		LanguageRegistry.addName(relphiteFrame, Names.relphiteFrame_name);
 		
 		//Decoration------------------------------------------------------------------------------------------------------------
-		LanguageRegistry.addName(relphitianSoil, "Relphitian Soil");
-		LanguageRegistry.addName(relphiteStone, "Relphite Stone");
+		LanguageRegistry.addName(relphitianSoil, Names.relphitianSoil_name);
+		LanguageRegistry.addName(relphiteStone, Names.relphiteStone_name);
 		}
 	
 	public static void addRecipes() {
