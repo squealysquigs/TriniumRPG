@@ -10,9 +10,9 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.ItemSword;
 
-public class ItemAdminiumSword extends ItemSword{
+public class TriniumSword extends ItemSword{
 
-	public ItemAdminiumSword(int par1, EnumToolMaterial par2EnumToolMaterial) {
+	public TriniumSword(int par1, EnumToolMaterial par2EnumToolMaterial) {
 		super(par1, par2EnumToolMaterial);
 		setCreativeTab(TriniumRPG.tabTrinium);
 		}
@@ -21,6 +21,5 @@ public class ItemAdminiumSword extends ItemSword{
 		public void registerIcons(IconRegister par1IconRegister)
 		{
 			this.itemIcon = par1IconRegister.registerIcon(ModInfo.ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
-		}
-		
+		}		
 }

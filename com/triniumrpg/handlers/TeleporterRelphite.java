@@ -1,4 +1,4 @@
-package com.triniumrpg;
+package com.triniumrpg.handlers;
 
 import java.util.ArrayList;
 import java.util.Iterator;

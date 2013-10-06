@@ -1,7 +1,7 @@
 package com.triniumrpg.blocks;
 
-import com.triniumrpg.TeleporterRelphite;
 import com.triniumrpg.TriniumRPG;
+import com.triniumrpg.handlers.TeleporterRelphite;
 import com.triniumrpg.lib.ModInfo;
 
 import cpw.mods.fml.relauncher.Side;

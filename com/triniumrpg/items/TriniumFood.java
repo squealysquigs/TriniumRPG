@@ -6,13 +6,12 @@ import com.triniumrpg.lib.ModInfo;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import net.minecraft.client.renderer.texture.IconRegister;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.Item;
+import net.minecraft.item.ItemFood;
 
-public class ItemRelphiteDust extends Item{
+public class TriniumFood extends ItemFood{
 
-	public ItemRelphiteDust(int par1) {
-		super(par1);
+	public TriniumFood(int id, int hunger, float saturation, boolean Food) {
+		super(id, hunger, saturation, Food);
 		setCreativeTab(TriniumRPG.tabTrinium);
 	}
 	
@@ -21,5 +20,5 @@ public class ItemRelphiteDust extends Item{
 	{
 		this.itemIcon = par1IconRegister.registerIcon(ModInfo.ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
 	}
-
 }
+

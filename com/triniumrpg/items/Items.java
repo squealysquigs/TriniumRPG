@@ -26,19 +26,19 @@ public class Items {
 	public static void init() {
 		goldencoin = new TriniumItem(IDs.goldencoin_actual).setUnlocalizedName(Names.goldencoin_unlocalname).setTextureName(ModInfo.ID + ":" + Names.goldencoin_unlocalname);
 		
-		beefStew = new ItemBeefStew(IDs.beefStew_actual, 10, 8, false).setUnlocalizedName(Names.beefStew_unlocalname);
+		beefStew = new TriniumFood(IDs.beefStew_actual, 10, 8, false).setUnlocalizedName(Names.beefStew_unlocalname);
 		GameRegistry.registerItem(beefStew, beefStew.getUnlocalizedName());
 
-		adminiumIngot = new ItemAdminiumIngot(IDs.adminiumIngot_actual).setUnlocalizedName(Names.adminiumIngot_unlocalname);
+		adminiumIngot = new TriniumItem(IDs.adminiumIngot_actual).setUnlocalizedName(Names.adminiumIngot_unlocalname);
 		GameRegistry.registerItem(adminiumIngot, adminiumIngot.getUnlocalizedName());
-		runiumIngot = new ItemRuniumIngot(IDs.runiumIngot_actual).setUnlocalizedName(Names.runiumIngot_unlocalname);
+		runiumIngot = new TriniumItem(IDs.runiumIngot_actual).setUnlocalizedName(Names.runiumIngot_unlocalname);
 		GameRegistry.registerItem(runiumIngot, runiumIngot.getUnlocalizedName());
-		relphiteDust = new ItemRelphiteDust(IDs.relphiteDust_actual).setUnlocalizedName(Names.relphiteDust_unlocalname);
+		relphiteDust = new TriniumItem(IDs.relphiteDust_actual).setUnlocalizedName(Names.relphiteDust_unlocalname);
 		GameRegistry.registerItem(relphiteDust, relphiteDust.getUnlocalizedName());	
 		
-		adminiumSword = new ItemAdminiumSword(IDs.adminiumSword_actual, ToolMaterials.ADMINIUMSWORD).setUnlocalizedName(Names.adminiumSword_unlocalname);
+		adminiumSword = new TriniumSword(IDs.adminiumSword_actual, ToolMaterials.ADMINIUMSWORD).setUnlocalizedName(Names.adminiumSword_unlocalname);
 		GameRegistry.registerItem(adminiumSword, adminiumSword.getUnlocalizedName());
-		runiumSword = new ItemRuniumSword(IDs.runiumSword_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.runiumSword_unlocalname);
+		runiumSword = new TriniumSword(IDs.runiumSword_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.runiumSword_unlocalname);
 		GameRegistry.registerItem(runiumSword, runiumSword.getUnlocalizedName());
 	}
 
