@@ -15,23 +15,10 @@ public class ToolMaterials {
 	public static EnumToolMaterial RUNIUMSHOVEL;
 
 	public static void init() {
-	    ADMINIUMSWORD = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMSWORD", 2, 2000, 2F, 8, 14);
+	    ADMINIUMSWORD = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMSWORD", 3, 2000, 8F, 4, 9);
+				
+		RUNIUMSWORD = net.minecraftforge.common.EnumHelper.addToolMaterial("RUNIUMSWORD", 5, 2500, 10F, 5, 12);
 		
-		ADMINIUMPICKAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMPICKAXE", 5, 2000, 5F, 4, 14);
-		
-		RUNIUMSWORD = net.minecraftforge.common.EnumHelper.addToolMaterial("RUNIUMSWORD", 2, 2500, 2F, 10, 14);
-		
-		RUNIUMPICKAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("RUNIUMPICKAXE", 7, 2500, 6F, 4, 14);
-		
-		ADMINIUMAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMAXE", 5, 2000, 6F, 4, 14);
-		
-		ADMINIUMSHOVEL = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMSHOVEL", 5, 2000, 5F, 5, 14);
-		
-		ADMINIUMHOE = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMHOE", 5, 2000, 5F, 5, 14);
-		
-		RUNIUMAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("RUNIUMAXE", 5, 2500, 6F, 5, 14);
-		
-		RUNIUMSHOVEL = net.minecraftforge.common.EnumHelper.addToolMaterial("RUNIUMSHOVEL", 5, 2500, 6F, 3, 14);
 		
 	    /*
 	     * WOOD(0, 59, 2.0F, 0.0F, 15),

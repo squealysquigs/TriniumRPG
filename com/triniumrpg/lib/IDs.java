@@ -18,6 +18,13 @@ public class IDs {
 	public static final int runiumSword_default = ItemStart + 6;	
 	public static int runiumSword_actual;
 	
+	public static final int liquidStone_default = ItemStart + 7;	
+	public static int liquidStone_actual;
+	public static final int holyStone_default = ItemStart + 8;	
+	public static int holyStone_actual;	
+	public static final int hellStone_default = ItemStart + 9;	
+	public static int hellStone_actual;	
+	
 	//Blocks======================================================================================================
 	public static final int BlockStart = 500;
 	public static final int adminiumOre_default = BlockStart;	
@@ -28,8 +35,4 @@ public class IDs {
 	public static int relphiteOre_actual;
 	public static final int relphiteFrame_default = BlockStart + 3;	
 	public static int relphiteFrame_actual;
-	public static final int relphitianSoil_default = BlockStart + 4;	
-	public static int relphitianSoil_actual;
-	public static final int relphiteStone_default = BlockStart + 5;	
-	public static int relphiteStone_actual;
 }

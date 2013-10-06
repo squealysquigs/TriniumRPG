@@ -33,13 +33,13 @@ public class Blocks {
 		//Functional------------------------------------------------------------------------------------------------------------
 		relphiteFrame = new TriniumBlock(IDs.relphiteFrame_actual, Material.rock).setUnlocalizedName(Names.relphiteFrame_unlocalname).setHardness(1).setStepSound(Block.soundStoneFootstep);				
 		GameRegistry.registerBlock(relphiteFrame, relphiteFrame.getUnlocalizedName());
-		relphitePortal = new BlockRelphitePortal(251).setUnlocalizedName(Names.relphitePortal_unlocalname);
+		relphitePortal = new BlockRelphitePortal(252).setUnlocalizedName(Names.relphitePortal_unlocalname);
 		GameRegistry.registerBlock(relphitePortal, relphitePortal.getUnlocalizedName());
 		
 		//Decoration------------------------------------------------------------------------------------------------------------
-		relphitianSoil = new TriniumBlock(IDs.relphitianSoil_actual, Material.grass).setUnlocalizedName(Names.relphitianSoil_unlocalname);
+		relphitianSoil = new TriniumBlock(253, Material.grass).setUnlocalizedName(Names.relphitianSoil_unlocalname);
 		GameRegistry.registerBlock(relphitianSoil, relphitianSoil.getUnlocalizedName());
-		relphiteStone = new TriniumBlock(IDs.relphiteStone_actual, Material.rock).setUnlocalizedName(Names.relphiteStone_unlocalname).setHardness(30).setStepSound(Block.soundStoneFootstep);
+		relphiteStone = new TriniumBlock(254, Material.rock).setUnlocalizedName(Names.relphiteStone_unlocalname).setHardness(30).setStepSound(Block.soundStoneFootstep);
 		GameRegistry.registerBlock(relphiteStone, relphiteStone.getUnlocalizedName()); 
 	}
 	
