@@ -1,6 +1,8 @@
 package com.triniumrpg.blocks;
 
 import com.triniumrpg.TriniumRPG;
+import com.triniumrpg.lib.ModInfo;
+import com.triniumrpg.lib.Names;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,14 +15,8 @@ public class BlockAdminiumOre extends Block{
 
 	public BlockAdminiumOre(int par1, Material par2Material) {
 		super(par1, par2Material);
-		this.setCreativeTab(CreativeTabs.tabBlock);
-	}
-
-
-	@SideOnly(Side.CLIENT)
-	public void registerIcons(IconRegister par1IconRegister)
-	{
-		this.blockIcon = par1IconRegister.registerIcon(TriniumRPG.modid + ":" + this.getUnlocalizedName().substring(5));
+		setCreativeTab(TriniumRPG.tabTrinium);
+		setTextureName(ModInfo.ID.toLowerCase() + ":" + getUnlocalizedName());
 	}
 }
 

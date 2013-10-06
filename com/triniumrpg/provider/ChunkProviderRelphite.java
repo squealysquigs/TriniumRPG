@@ -15,6 +15,7 @@ import java.util.List;
 import java.util.Random;
 
 import com.triniumrpg.TriniumRPG;
+import com.triniumrpg.blocks.Blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
@@ -200,7 +201,7 @@ public class ChunkProviderRelphite implements IChunkProvider
                             {
                                 if ((d16 += d15) > 0.0D)
                                 {
-                                    par3ArrayOfByte[j2 += short1] = (byte) TriniumRPG.relphiteStone.blockID;
+                                    par3ArrayOfByte[j2 += short1] = (byte) Blocks.relphiteStone.blockID;
                                 }
                                 else if (k1 * 8 + l1 < b2)
                                 {
@@ -266,14 +267,14 @@ public class ChunkProviderRelphite implements IChunkProvider
                         {
                             j1 = -1;
                         }
-                        else if (b3 == TriniumRPG.relphitianSoil.blockID)
+                        else if (b3 == Blocks.relphitianSoil.blockID)
                         {
                             if (j1 == -1)
                             {
                                 if (i1 <= 0)
                                 {
                                     b1 = 0;
-                                    b2 = (byte)TriniumRPG.relphiteStone.blockID;
+                                    b2 = (byte)Blocks.relphiteStone.blockID;
                                 }
                                 else if (k1 >= b0 - 4 && k1 <= b0 + 1)
                                 {
@@ -285,11 +286,11 @@ public class ChunkProviderRelphite implements IChunkProvider
                                 {
                                     if (f < 0.15F)
                                     {
-                                        b1 = (byte)TriniumRPG.relphitianSoil.blockID;
+                                        b1 = (byte)Blocks.relphitianSoil.blockID;
                                     }
                                     else
                                     {
-                                        b1 = (byte)TriniumRPG.relphitianSoil.blockID;
+                                        b1 = (byte)Blocks.relphitianSoil.blockID;
                                     }
                                 }
 
@@ -309,10 +310,10 @@ public class ChunkProviderRelphite implements IChunkProvider
                                 --j1;
                                 par3ArrayOfByte[l1] = b2;
 
-                                if (j1 == 0 && b2 == TriniumRPG.relphiteStone.blockID)
+                                if (j1 == 0 && b2 == Blocks.relphiteStone.blockID)
                                 {
                                     j1 = this.rand.nextInt(4);
-                                    b2 = (byte)TriniumRPG.relphiteStone.blockID;
+                                    b2 = (byte)Blocks.relphiteStone.blockID;
                                 }
                             }
                         }

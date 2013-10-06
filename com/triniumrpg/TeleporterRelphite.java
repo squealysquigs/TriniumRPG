@@ -5,6 +5,8 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Random;
 
+import com.triniumrpg.blocks.Blocks;
+
 import net.minecraft.block.Block;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Direction;
@@ -77,7 +79,7 @@ public class TeleporterRelphite extends Teleporter
                         int l1 = j + j1;
                         int i2 = k + i1 * b1 - l * b0;
                         boolean flag = j1 < 0;
-                        this.worldServerInstance.setBlock(k1, l1, i2, flag ? TriniumRPG.relphiteFrame.blockID : 0);
+                        this.worldServerInstance.setBlock(k1, l1, i2, flag ? Blocks.relphiteFrame.blockID : 0);
                     }
                 }
             }
@@ -126,9 +128,9 @@ public class TeleporterRelphite extends Teleporter
 
                     for (int i2 = this.worldServerInstance.getActualHeight() - 1; i2 >= 0; --i2)
                     {
-                        if (this.worldServerInstance.getBlockId(k1, i2, l1) == TriniumRPG.relphitePortal.blockID)
+                        if (this.worldServerInstance.getBlockId(k1, i2, l1) == Blocks.relphitePortal.blockID)
                         {
-                            while (this.worldServerInstance.getBlockId(k1, i2 - 1, l1) == TriniumRPG.relphitePortal.blockID)
+                            while (this.worldServerInstance.getBlockId(k1, i2 - 1, l1) == Blocks.relphitePortal.blockID)
                             {
                                 --i2;
                             }
@@ -162,22 +164,22 @@ public class TeleporterRelphite extends Teleporter
             d4 = (double)k + 0.5D;
             int j2 = -1;
 
-            if (this.worldServerInstance.getBlockId(i - 1, j, k) == TriniumRPG.relphitePortal.blockID)
+            if (this.worldServerInstance.getBlockId(i - 1, j, k) == Blocks.relphitePortal.blockID)
             {
                 j2 = 2;
             }
 
-            if (this.worldServerInstance.getBlockId(i + 1, j, k) == TriniumRPG.relphitePortal.blockID)
+            if (this.worldServerInstance.getBlockId(i + 1, j, k) == Blocks.relphitePortal.blockID)
             {
                 j2 = 0;
             }
 
-            if (this.worldServerInstance.getBlockId(i, j, k - 1) == TriniumRPG.relphitePortal.blockID)
+            if (this.worldServerInstance.getBlockId(i, j, k - 1) == Blocks.relphitePortal.blockID)
             {
                 j2 = 3;
             }
 
-            if (this.worldServerInstance.getBlockId(i, j, k + 1) == TriniumRPG.relphitePortal.blockID)
+            if (this.worldServerInstance.getBlockId(i, j, k + 1) == Blocks.relphitePortal.blockID)
             {
                 j2 = 1;
             }
@@ -462,7 +464,7 @@ public class TeleporterRelphite extends Teleporter
                         j3 = j5 + l2;
                         i4 = j2 + (i3 - 1) * l5 - k2 * k5;
                         flag = l2 < 0;
-                        this.worldServerInstance.setBlock(k3, j3, i4, flag ? TriniumRPG.relphiteFrame.blockID : 0);
+                        this.worldServerInstance.setBlock(k3, j3, i4, flag ? Blocks.relphiteFrame.blockID : 0);
                     }
                 }
             }
@@ -478,7 +480,7 @@ public class TeleporterRelphite extends Teleporter
                     j3 = j5 + l2;
                     i4 = j2 + (i3 - 1) * l5;
                     flag = i3 == 0 || i3 == 3 || l2 == -1 || l2 == 3;
-                    this.worldServerInstance.setBlock(k3, j3, i4, flag ? TriniumRPG.relphiteFrame.blockID : TriniumRPG.relphitePortal.blockID, 0, 2);
+                    this.worldServerInstance.setBlock(k3, j3, i4, flag ? Blocks.relphiteFrame.blockID : Blocks.relphitePortal.blockID, 0, 2);
                 }
             }
 

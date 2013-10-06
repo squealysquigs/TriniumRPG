@@ -2,6 +2,7 @@ package com.triniumrpg.blocks;
 
 import com.triniumrpg.TeleporterRelphite;
 import com.triniumrpg.TriniumRPG;
+import com.triniumrpg.lib.ModInfo;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -19,8 +20,8 @@ public class BlockRelphitePortal extends BlockPortal
 {
        public BlockRelphitePortal(int id)
        {
-              super(id);
-              this.setCreativeTab(CreativeTabs.tabBlock);
+    	   	super(id);
+      		setCreativeTab(TriniumRPG.tabTrinium);
        }
       
        public void onEntityCollidedWithBlock(World par1World, int par2, int par3, int par4, Entity par5Entity)
@@ -58,12 +59,12 @@ public boolean tryToCreatePortal(World par1World, int par2, int par3, int par4)
     byte b0 = 0;
     byte b1 = 0;
 
-    if (par1World.getBlockId(par2 - 1, par3, par4) == TriniumRPG.relphiteFrame.blockID || par1World.getBlockId(par2 + 1, par3, par4) == TriniumRPG.relphiteFrame.blockID)
+    if (par1World.getBlockId(par2 - 1, par3, par4) == Blocks.relphiteFrame.blockID || par1World.getBlockId(par2 + 1, par3, par4) == Blocks.relphiteFrame.blockID)
     {
         b0 = 1;
     }
 
-    if (par1World.getBlockId(par2, par3, par4 - 1) == TriniumRPG.relphiteFrame.blockID || par1World.getBlockId(par2, par3, par4 + 1) == TriniumRPG.relphiteFrame.blockID)
+    if (par1World.getBlockId(par2, par3, par4 - 1) == Blocks.relphiteFrame.blockID || par1World.getBlockId(par2, par3, par4 + 1) == Blocks.relphiteFrame.blockID)
     {
         b1 = 1;
     }
@@ -96,7 +97,7 @@ public boolean tryToCreatePortal(World par1World, int par2, int par3, int par4)
 
                     if (flag)
                     {
-                        if (j1 != TriniumRPG.relphiteFrame.blockID)
+                        if (j1 != Blocks.relphiteFrame.blockID)
                         {
                             return false;
                         }
@@ -113,7 +114,7 @@ public boolean tryToCreatePortal(World par1World, int par2, int par3, int par4)
         {
             for (i1 = 0; i1 < 3; ++i1)
             {
-                par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, TriniumRPG.relphitePortal.blockID, 0, 2);
+                par1World.setBlock(par2 + b0 * l, par3 + i1, par4 + b1 * l, Blocks.relphitePortal.blockID, 0, 2);
             }
         }
 
@@ -139,7 +140,7 @@ public void onNeighborBlockChange(World par1World, int par2, int par3, int par4,
         ;
     }
 
-    if (par1World.getBlockId(par2, i1 - 1, par4) != TriniumRPG.relphiteFrame.blockID)
+    if (par1World.getBlockId(par2, i1 - 1, par4) != Blocks.relphiteFrame.blockID)
     {
         par1World.setBlockToAir(par2, par3, par4);
     }
@@ -152,7 +153,7 @@ public void onNeighborBlockChange(World par1World, int par2, int par3, int par4,
             ;
         }
 
-        if (j1 == 3 && par1World.getBlockId(par2, i1 + j1, par4) == TriniumRPG.relphiteFrame.blockID)
+        if (j1 == 3 && par1World.getBlockId(par2, i1 + j1, par4) == Blocks.relphiteFrame.blockID)
         {
             boolean flag = par1World.getBlockId(par2 - 1, par3, par4) == this.blockID || par1World.getBlockId(par2 + 1, par3, par4) == this.blockID;
             boolean flag1 = par1World.getBlockId(par2, par3, par4 - 1) == this.blockID || par1World.getBlockId(par2, par3, par4 + 1) == this.blockID;
@@ -163,7 +164,7 @@ public void onNeighborBlockChange(World par1World, int par2, int par3, int par4,
             }
             else
             {
-                if ((par1World.getBlockId(par2 + b0, par3, par4 + b1) != TriniumRPG.relphiteFrame.blockID || par1World.getBlockId(par2 - b0, par3, par4 - b1) != this.blockID) && (par1World.getBlockId(par2 - b0, par3, par4 - b1) != TriniumRPG.relphiteFrame.blockID || par1World.getBlockId(par2 + b0, par3, par4 + b1) != this.blockID))
+                if ((par1World.getBlockId(par2 + b0, par3, par4 + b1) != Blocks.relphiteFrame.blockID || par1World.getBlockId(par2 - b0, par3, par4 - b1) != this.blockID) && (par1World.getBlockId(par2 - b0, par3, par4 - b1) != Blocks.relphiteFrame.blockID || par1World.getBlockId(par2 + b0, par3, par4 + b1) != this.blockID))
                 {
                     par1World.setBlockToAir(par2, par3, par4);
                 }
@@ -181,7 +182,7 @@ public void onNeighborBlockChange(World par1World, int par2, int par3, int par4,
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister par1IconRegister)
 	{
-		this.blockIcon = par1IconRegister.registerIcon(TriniumRPG.modid + ":" + this.getUnlocalizedName().substring(5));
+		this.blockIcon = par1IconRegister.registerIcon(ModInfo.ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
 	}
 }
 	

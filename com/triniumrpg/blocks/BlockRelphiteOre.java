@@ -1,6 +1,7 @@
 package com.triniumrpg.blocks;
 
 import com.triniumrpg.TriniumRPG;
+import com.triniumrpg.lib.ModInfo;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -13,14 +14,14 @@ public class BlockRelphiteOre extends Block{
 
 	public BlockRelphiteOre(int par1, Material par2Material) {
 		super(par1, par2Material);
-		this.setCreativeTab(CreativeTabs.tabBlock);
+		setCreativeTab(TriniumRPG.tabTrinium);
 	}
 
 
 	@SideOnly(Side.CLIENT)
 	public void registerIcons(IconRegister par1IconRegister)
 	{
-		this.blockIcon = par1IconRegister.registerIcon(TriniumRPG.modid + ":" + this.getUnlocalizedName().substring(5));
+		this.blockIcon = par1IconRegister.registerIcon(ModInfo.ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
 	}
 }
 

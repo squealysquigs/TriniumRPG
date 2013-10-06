@@ -3,6 +3,7 @@ package com.triniumrpg.handlers;
 import java.util.Random;
 
 import com.triniumrpg.TriniumRPG;
+import com.triniumrpg.blocks.Blocks;
 
 import net.minecraft.block.Block;
 import net.minecraft.world.World;
@@ -33,13 +34,13 @@ public class EventManager implements IWorldGenerator
                int randPosY = random.nextInt(16);
                int randPosZ = j + random.nextInt(16);
                
-               new WorldGenMinable(TriniumRPG.adminiumOre.blockID, 4)
+               new WorldGenMinable(Blocks.adminiumOre.blockID, 4)
                .generate(world, random, randPosX, randPosY, randPosZ);
                
-               new WorldGenMinable(TriniumRPG.runiumOre.blockID, 4)
+               new WorldGenMinable(Blocks.runiumOre.blockID, 4)
                .generate(world, random, randPosX, randPosY, randPosZ);
                
-               new WorldGenMinable(TriniumRPG.relphiteOre.blockID, 1)
+               new WorldGenMinable(Blocks.relphiteOre.blockID, 1)
                .generate(world, random, randPosX, randPosY, randPosZ);
                
            }
@@ -58,10 +59,10 @@ public class EventManager implements IWorldGenerator
         int randPosY = random.nextInt(16);
         int randPosZ = j + random.nextInt(16);
         
-		new WorldGenMinable(TriniumRPG.adminiumOre.blockID, 7)
+		new WorldGenMinable(Blocks.adminiumOre.blockID, 7)
 		.generate(world, random, randPosX, randPosY, randPosZ);
 		
-		new WorldGenMinable(TriniumRPG.runiumOre.blockID, 8)
+		new WorldGenMinable(Blocks.runiumOre.blockID, 8)
 		.generate(world, random, randPosX, randPosY, randPosZ);
 	}
 	
