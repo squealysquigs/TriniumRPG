@@ -7,8 +7,10 @@ import com.triniumrpg.lib.ModInfo;
 import com.triniumrpg.lib.Names;
 import com.triniumrpg.lib.ToolMaterials;
 
+import net.minecraft.block.Block;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
+import net.minecraft.item.ItemBucket;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.crafting.FurnaceRecipes;
 import cpw.mods.fml.common.registry.GameRegistry;
@@ -22,9 +24,21 @@ public class Items {
 	public static Item relphiteDust;
 	public static Item adminiumSword;
 	public static Item runiumSword;
+	public static Item liquidStone;
+	public static Item holyStone;
+	public static Item hellStone;
+	
 
 	public static void init() {
 		goldencoin = new TriniumItem(IDs.goldencoin_actual).setUnlocalizedName(Names.goldencoin_unlocalname).setTextureName(ModInfo.ID + ":" + Names.goldencoin_unlocalname);
+		GameRegistry.registerItem(goldencoin, goldencoin.getUnlocalizedName());
+		
+		liquidStone = (new LiquidStone(IDs.liquidStone_actual, 0)).setUnlocalizedName(Names.liquidStone_unlocalname).setMaxStackSize(16).setTextureName("bucket_empty");
+		GameRegistry.registerItem(liquidStone, liquidStone.getUnlocalizedName());
+		holyStone = (new LiquidStone(IDs.holyStone_actual, Block.waterMoving.blockID)).setUnlocalizedName(Names.holyStone_unlocalname).setContainerItem(liquidStone).setTextureName("stick");
+		GameRegistry.registerItem(holyStone, holyStone.getUnlocalizedName());
+		hellStone = (new LiquidStone(IDs.hellStone_actual, Block.lavaMoving.blockID)).setUnlocalizedName(Names.hellStone_unlocalname).setContainerItem(liquidStone).setTextureName("flint");
+		GameRegistry.registerItem(hellStone, hellStone.getUnlocalizedName());
 		
 		beefStew = new TriniumFood(IDs.beefStew_actual, 10, 8, false).setUnlocalizedName(Names.beefStew_unlocalname);
 		GameRegistry.registerItem(beefStew, beefStew.getUnlocalizedName());

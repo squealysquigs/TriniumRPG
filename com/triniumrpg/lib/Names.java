@@ -5,6 +5,13 @@ public class Names {
 	public static final String goldencoin_unlocalname = "goldencoin";
 	public static final String goldencoin_name = "Golden Coin";
 	
+	public static final String liquidStone_unlocalname = "liquidStone";
+	public static final String liquidStone_name = "Liquid Stone";
+	public static final String holyStone_unlocalname = "holyStone";
+	public static final String holyStone_name = "Holy Stone";
+	public static final String hellStone_unlocalname = "hellStone";
+	public static final String hellStone_name = "Hell Stone";
+	
 	public static String beefStew_unlocalname = "beefstew";
 	public static String beefStew_name = "Beef Stew";
 	public static String adminiumIngot_unlocalname = "adminiumIngot";
