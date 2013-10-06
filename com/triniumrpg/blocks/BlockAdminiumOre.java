@@ -16,7 +16,12 @@ public class BlockAdminiumOre extends Block{
 	public BlockAdminiumOre(int par1, Material par2Material) {
 		super(par1, par2Material);
 		setCreativeTab(TriniumRPG.tabTrinium);
-		setTextureName(ModInfo.ID.toLowerCase() + ":" + getUnlocalizedName());
+	}
+
+	@SideOnly(Side.CLIENT)
+	public void registerIcons(IconRegister par1IconRegister)
+	{
+		this.blockIcon = par1IconRegister.registerIcon(ModInfo.ID.toLowerCase() + ":" + this.getUnlocalizedName().substring(5));
 	}
 }
 
