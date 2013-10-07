@@ -25,6 +25,23 @@ public class IDs {
 	public static final int hellStone_default = ItemStart + 9;	
 	public static int hellStone_actual;	
 	
+	public static final int pot_default = ItemStart + 10;	
+	public static int pot_actual;	
+	public static final int flourPot_default = ItemStart + 11;	
+	public static int flourPot_actual;	
+	public static final int breadDough_default = ItemStart + 12;	
+	public static int breadDough_actual;
+	
+	public static final int pestle_default = ItemStart + 13;	
+	public static int pestle_actual;	
+	public static final int pestleMortar_default = ItemStart + 14;	
+	public static int pestleMortar_actual;	
+	
+	public static final int softClay_default = ItemStart + 15;	
+	public static int softClay_actual;		
+	public static final int unfPot_default = ItemStart + 16;	
+	public static int unfPot_actual;	
+	
 	//Blocks======================================================================================================
 	public static final int BlockStart = 500;
 	public static final int adminiumOre_default = BlockStart;	

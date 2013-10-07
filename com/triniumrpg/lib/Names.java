@@ -4,6 +4,21 @@ public class Names {
 	//Items==============================================================================================
 	public static final String goldencoin_unlocalname = "goldencoin";
 	public static final String goldencoin_name = "Golden Coin";
+	public static final String pestle_unlocalname = "pestle";
+	public static final String pestle_name = "Pestle";
+	public static final String pestleMortar_unlocalname = "pestleMortar";
+	public static final String pestleMortar_name = "Pestle & Mortar";
+	
+	public static final String softClay_unlocalname = "softClay";
+	public static final String softClay_name = "Soft Clay";
+	public static final String unfPot_unlocalname = "unfPot";
+	public static final String unfPot_name = "Pot (unf)";
+	public static final String pot_unlocalname = "pot";
+	public static final String pot_name = "Pot";
+	public static final String flourPot_unlocalname = "flourPot";
+	public static final String flourPot_name = "Pot of Flour";
+	public static final String breadDough_unlocalname = "breadDough";
+	public static final String breadDough_name = "Bread Dough";
 	
 	public static final String liquidStone_unlocalname = "liquidStone";
 	public static final String liquidStone_name = "Liquid Stone";
