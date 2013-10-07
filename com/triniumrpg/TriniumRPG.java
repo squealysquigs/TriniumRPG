@@ -8,6 +8,7 @@ import com.triniumrpg.blocks.Blocks;
 import com.triniumrpg.handlers.ConfigHandler;
 import com.triniumrpg.handlers.EventManager;
 import com.triniumrpg.handlers.GuiHandler;
+import com.triniumrpg.handlers.RecipeRemover;
 import com.triniumrpg.items.Items;
 import com.triniumrpg.lib.ArmorMaterials;
 import com.triniumrpg.lib.CreativeTab;
@@ -52,6 +53,7 @@ public class TriniumRPG {
 		
 		@EventHandler
 		public static void preInit(FMLPreInitializationEvent event) {
+			RecipeRemover.removeRecipe(new ItemStack(Item.bread));
 			LogHelper.log(Level.INFO, "Loading Config");
 			proxy.initRenderers();
 			proxy.initSounds();

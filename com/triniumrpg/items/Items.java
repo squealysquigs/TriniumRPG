@@ -43,7 +43,7 @@ public class Items {
 
 		pestle = new TriniumItem(IDs.pestle_actual).setUnlocalizedName(Names.pestle_unlocalname).setFull3D();
 		GameRegistry.registerItem(pestle, pestle.getUnlocalizedName());
-		pestleMortar = new TriniumItem(IDs.pestleMortar_actual).setUnlocalizedName(Names.pestleMortar_unlocalname);
+		pestleMortar = new TriniumReusableItem(IDs.pestleMortar_actual).setUnlocalizedName(Names.pestleMortar_unlocalname);
 		GameRegistry.registerItem(pestleMortar, pestleMortar.getUnlocalizedName());
 		
 		softClay = new TriniumItem(IDs.softClay_actual).setUnlocalizedName(Names.softClay_unlocalname);
