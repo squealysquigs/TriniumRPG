@@ -17,6 +17,7 @@ public class TriniumBowlFood extends ItemFood{
 	public TriniumBowlFood(int id, int hunger, float saturation, boolean Food) {
 		super(id, hunger, saturation, Food);
 		setCreativeTab(TriniumRPG.tabTrinium);
+		setMaxStackSize(1);
 	}
 	
 	@SideOnly(Side.CLIENT)
