@@ -13,7 +13,14 @@ public class ConfigHandler {
 
 		config.load();
 
-		IDs.goldencoin_actual = config.getItem(Names.goldencoin_name, IDs.goldencoin_default).getInt() - 256;
+		IDs.goldencoin_actual = config.getItem(Names.goldencoin_name, IDs.goldencoin_default).getInt() - 256;		
+		IDs.pestle_actual = config.getItem(Names.pestle_name, IDs.pestle_default).getInt() - 256;
+		IDs.pestleMortar_actual = config.getItem(Names.pestleMortar_name, IDs.pestleMortar_default).getInt() - 256;
+		IDs.softClay_actual = config.getItem(Names.softClay_name, IDs.softClay_default).getInt() - 256;
+		IDs.unfPot_actual = config.getItem(Names.unfPot_name, IDs.unfPot_default).getInt() - 256;
+		IDs.pot_actual = config.getItem(Names.pot_name, IDs.pot_default).getInt() - 256;
+		IDs.flourPot_actual = config.getItem(Names.flourPot_name, IDs.flourPot_default).getInt() - 256;
+		IDs.breadDough_actual = config.getItem(Names.breadDough_name, IDs.breadDough_default).getInt() - 256;
 		IDs.liquidStone_actual = config.getItem(Names.liquidStone_name, IDs.liquidStone_default).getInt() - 256;
 		IDs.hellStone_actual = config.getItem(Names.hellStone_name, IDs.hellStone_default).getInt() - 256;
 		IDs.holyStone_actual = config.getItem(Names.holyStone_name, IDs.holyStone_default).getInt() - 256;
