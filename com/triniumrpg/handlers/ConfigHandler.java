@@ -36,6 +36,8 @@ public class ConfigHandler {
 		IDs.runiumOre_actual = config.getBlock(Names.runiumOre_name, IDs.runiumOre_default).getInt();
 		IDs.relphiteOre_actual = config.getBlock(Names.relphiteOre_name, IDs.relphiteOre_default).getInt();
 		IDs.relphiteFrame_actual = config.getBlock(Names.relphiteFrame_name, IDs.relphiteFrame_default).getInt();
+		IDs.millStone_actual = config.getBlock(Names.millStone_name, IDs.millStone_default).getInt();
+		IDs.flour_actual = config.getBlock(Names.flour_name, IDs.flour_default).getInt();
 		config.save();
 	}
 }

@@ -52,4 +52,8 @@ public class IDs {
 	public static int relphiteOre_actual;
 	public static final int relphiteFrame_default = BlockStart + 3;	
 	public static int relphiteFrame_actual;
+	public static final int millStone_default = BlockStart + 4;	
+	public static int millStone_actual;
+	public static final int flour_default = BlockStart + 5;	
+	public static int flour_actual;
 }

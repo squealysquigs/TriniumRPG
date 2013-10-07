@@ -40,8 +40,6 @@ public class Names {
 	public static String runiumSword_unlocalname = "runiumSword";
 	public static String runiumSword_name = "Runium Sword";
 	//Blocks==============================================================================================
-	
-	//Ores-----------------------------------------------------------------------------------------------
 	public static String adminiumOre_unlocalname = "adminiumOre";
 	public static String adminiumOre_name = "Adminium Ore";
 	public static String runiumOre_unlocalname = "runiumOre";
@@ -56,4 +54,8 @@ public class Names {
 	public static String relphitianSoil_name = "Relphite Soil";
 	public static String relphiteStone_unlocalname = "relphiteStone";
 	public static String relphiteStone_name = "Relphite Stone";
+	public static String flour_unlocalname = "flour";
+	public static String flour_name = "Flour";
+	public static String millStone_unlocalname = "millStone";
+	public static String millStone_name = "Mill Stone";
 }

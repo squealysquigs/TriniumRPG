@@ -8,6 +8,7 @@ import com.triniumrpg.lib.Names;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockDispenser;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.common.MinecraftForge;
@@ -18,8 +19,10 @@ public class Blocks {
 	public static Block relphiteOre;
 	public static Block relphiteFrame;
 	public static Block relphitePortal;
+	public static Block millStone;
 	public static Block relphitianSoil;
 	public static Block relphiteStone;
+	public static Block flour;
 
 	public static void init() {
 		//Ores------------------------------------------------------------------------------------------------------------
@@ -35,12 +38,18 @@ public class Blocks {
 		GameRegistry.registerBlock(relphiteFrame, relphiteFrame.getUnlocalizedName());
 		relphitePortal = new BlockRelphitePortal(252).setUnlocalizedName(Names.relphitePortal_unlocalname);
 		GameRegistry.registerBlock(relphitePortal, relphitePortal.getUnlocalizedName());
+		millStone = (new BlockMillStone(IDs.millStone_actual)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName(Names.millStone_unlocalname);
+		GameRegistry.registerBlock(millStone, millStone.getUnlocalizedName());
 		
 		//Decoration------------------------------------------------------------------------------------------------------------
 		relphitianSoil = new TriniumBlock(253, Material.grass).setUnlocalizedName(Names.relphitianSoil_unlocalname);
 		GameRegistry.registerBlock(relphitianSoil, relphitianSoil.getUnlocalizedName());
 		relphiteStone = new TriniumBlock(254, Material.rock).setUnlocalizedName(Names.relphiteStone_unlocalname).setHardness(30).setStepSound(Block.soundStoneFootstep);
-		GameRegistry.registerBlock(relphiteStone, relphiteStone.getUnlocalizedName()); 
+		GameRegistry.registerBlock(relphiteStone, relphiteStone.getUnlocalizedName());
+		
+		//Misc-------------------------------------------------------------------------------------------------------------------
+		flour = new BlockFlour(IDs.flour_actual).setUnlocalizedName(Names.flour_unlocalname);
+		GameRegistry.registerBlock(flour, flour.getUnlocalizedName());
 	}
 	
 	public static void harvestLevels() {		
@@ -62,10 +71,14 @@ public class Blocks {
 		//Functional------------------------------------------------------------------------------------------------------------
 		LanguageRegistry.addName(relphitePortal, Names.relphitePortal_name);
 		LanguageRegistry.addName(relphiteFrame, Names.relphiteFrame_name);
+		LanguageRegistry.addName(millStone, Names.millStone_name);
 		
 		//Decoration------------------------------------------------------------------------------------------------------------
 		LanguageRegistry.addName(relphitianSoil, Names.relphitianSoil_name);
 		LanguageRegistry.addName(relphiteStone, Names.relphiteStone_name);
+		
+		//Misc-------------------------------------------------------------------------------------------------------------------
+		LanguageRegistry.addName(flour, Names.flour_name);
 		}
 	
 	public static void addRecipes() {
