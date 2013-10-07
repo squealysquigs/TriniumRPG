@@ -40,7 +40,7 @@ public class Items {
 		hellStone = (new LiquidStone(IDs.hellStone_actual, Block.lavaMoving.blockID)).setUnlocalizedName(Names.hellStone_unlocalname).setContainerItem(liquidStone).setTextureName("flint");
 		GameRegistry.registerItem(hellStone, hellStone.getUnlocalizedName());
 		
-		beefStew = new TriniumFood(IDs.beefStew_actual, 10, 8, false).setUnlocalizedName(Names.beefStew_unlocalname);
+		beefStew = new TriniumBowlFood(IDs.beefStew_actual, 10, 8, false).setUnlocalizedName(Names.beefStew_unlocalname);
 		GameRegistry.registerItem(beefStew, beefStew.getUnlocalizedName());
 
 		adminiumIngot = new TriniumItem(IDs.adminiumIngot_actual).setUnlocalizedName(Names.adminiumIngot_unlocalname);
