@@ -5,6 +5,9 @@ import java.util.logging.Level;
 import com.triniumrpg.blocks.BlockRelphitePortal;
 import com.triniumrpg.blocks.BlockRelphitianSoil;
 import com.triniumrpg.blocks.Blocks;
+import com.triniumrpg.entities.EntityJackO;
+import com.triniumrpg.entities.ModelJackO;
+import com.triniumrpg.entities.RenderJackO;
 import com.triniumrpg.handlers.ConfigHandler;
 import com.triniumrpg.handlers.EventManager;
 import com.triniumrpg.handlers.GuiHandler;
@@ -21,6 +24,10 @@ import com.triniumrpg.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.entity.Entity;
+import net.minecraft.entity.EntityEggInfo;
+import net.minecraft.entity.EntityList;
+import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.EnumToolMaterial;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
@@ -28,6 +35,7 @@ import net.minecraft.item.crafting.FurnaceRecipes;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.MinecraftForge;
+import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
@@ -36,6 +44,7 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.NetworkMod;
+import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
@@ -60,8 +69,19 @@ public class TriniumRPG {
 			ConfigHandler.init(event.getSuggestedConfigurationFile());
 		}
 
+		public static int startEntityId = 300;
+		public static int mobID = 0;
+		public static int primaryColor = 0x047A14;
+		
 		@EventHandler
 		public static void init(FMLInitializationEvent event) {
+			
+			EntityRegistry.registerGlobalEntityID(EntityJackO.class, "JackO", ++mobID);
+			EntityRegistry.addSpawn(EntityJackO.class, /*how common*/1, /*entity per group min*/1, /*max*/4, EnumCreatureType.creature);
+			EntityRegistry.findGlobalUniqueEntityId();
+			registerEntityEgg(EntityJackO.class, primaryColor, 0xBD6100);
+			RenderingRegistry.registerEntityRenderingHandler(EntityJackO.class, new RenderJackO(new ModelJackO(), 0.3F));
+			LanguageRegistry.instance().addStringLocalization("entity.JackO.name", "Jack O' Lantern");
 			
 			DimensionManager.registerProviderType(TriniumRPG.dimensionId, WorldProviderTriniumRPG.class, false);
 			DimensionManager.registerDimension(TriniumRPG.dimensionId, TriniumRPG.dimensionId);
@@ -97,6 +117,20 @@ public class TriniumRPG {
 		@EventHandler
 		public static void postInit(FMLPostInitializationEvent event) {
 		}
+		
+		public static void registerEntityEgg(Class <? extends Entity> entity, int primaryColor, int secondaryColor) {
+			int id = getUniqueEntityId();
+			EntityList.IDtoClassMapping.put(id, entity);
+			EntityList.entityEggs.put(id, new EntityEggInfo(id, primaryColor, secondaryColor));
+			}
+
+			public static int getUniqueEntityId() {
+			do {
+			startEntityId++;
+			}
+			while (EntityList.getStringFromID(startEntityId) != null);
+			return startEntityId;
+			}
 
 		@SidedProxy(clientSide = ModInfo.PROXY_LOCATION + "ClientProxy", serverSide = ModInfo.PROXY_LOCATION + "CommonProxy")
 		public static CommonProxy proxy;
