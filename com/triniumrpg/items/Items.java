@@ -35,6 +35,7 @@ public class Items {
 	public static Item liquidStone;
 	public static Item holyStone;
 	public static Item hellStone;
+	public static Item flingerStaff;
 	
 
 	public static void init() {
@@ -78,6 +79,9 @@ public class Items {
 		GameRegistry.registerItem(adminiumSword, adminiumSword.getUnlocalizedName());
 		runiumSword = new TriniumSword(IDs.runiumSword_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.runiumSword_unlocalname);
 		GameRegistry.registerItem(runiumSword, runiumSword.getUnlocalizedName());
+		
+		flingerStaff = new TriniumStaff(IDs.flingerStaff_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.flingerStaff_unlocalname);
+		GameRegistry.registerItem(flingerStaff, flingerStaff.getUnlocalizedName());
 	}
 
 	public static void addNames() {
@@ -100,6 +104,8 @@ public class Items {
 		
 		LanguageRegistry.addName(adminiumSword, Names.adminiumSword_name);
 		LanguageRegistry.addName(runiumSword, Names.runiumSword_name);
+		
+		LanguageRegistry.addName(flingerStaff, Names.flingerStaff_name);
 	}
 
 	public static void addRecipes() {

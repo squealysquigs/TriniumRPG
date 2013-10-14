@@ -26,6 +26,8 @@ public class Names {
 	public static final String holyStone_name = "Holy Stone";
 	public static final String hellStone_unlocalname = "hellStone";
 	public static final String hellStone_name = "Hell Stone";
+	public static final String flingerStaff_unlocalname = "flingerStaff";
+	public static final String flingerStaff_name = "Flinger Staff";
 	
 	public static String beefStew_unlocalname = "beefstew";
 	public static String beefStew_name = "Beef Stew";
@@ -58,4 +60,5 @@ public class Names {
 	public static String flour_name = "Flour";
 	public static String millStone_unlocalname = "millStone";
 	public static String millStone_name = "Mill Stone";
+	
 }

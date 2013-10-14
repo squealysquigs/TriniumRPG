@@ -41,6 +41,8 @@ public class IDs {
 	public static int softClay_actual;		
 	public static final int unfPot_default = ItemStart + 16;	
 	public static int unfPot_actual;	
+	public static final int flingerStaff_default = ItemStart + 17;
+	public static int flingerStaff_actual;
 	
 	//Blocks======================================================================================================
 	public static final int BlockStart = 500;
@@ -56,4 +58,5 @@ public class IDs {
 	public static int millStone_actual;
 	public static final int flour_default = BlockStart + 5;	
 	public static int flour_actual;
+	
 }
