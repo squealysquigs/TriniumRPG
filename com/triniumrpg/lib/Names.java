@@ -26,8 +26,7 @@ public class Names {
 	public static final String holyStone_name = "Holy Stone";
 	public static final String hellStone_unlocalname = "hellStone";
 	public static final String hellStone_name = "Hell Stone";
-	public static final String flingerStaff_unlocalname = "flingerStaff";
-	public static final String flingerStaff_name = "Flinger Staff";
+	
 	
 	public static String beefStew_unlocalname = "beefstew";
 	public static String beefStew_name = "Beef Stew";
@@ -41,6 +40,20 @@ public class Names {
 	public static String adminiumSword_name = "Adminium Sword";
 	public static String runiumSword_unlocalname = "runiumSword";
 	public static String runiumSword_name = "Runium Sword";
+	public static String runiumPickaxe_unlocalname = "runiumPickaxe";
+	public static String runiumPickaxe_name = "Runium Pickaxe";
+	public static String adminiumPickaxe_unlocalname = "adminiumPickaxe";
+	public static String adminiumPickaxe_name = "Adminium Pickaxe";
+	public static String adminiumAxe_unlocalname = "adminiumAxe";
+	public static String adminiumAxe_name = "Adminium Axe";
+	public static String runiumAxe_unlocalname = "runiumAxe";
+	public static String runiumAxe_name = "Runium Axe";
+	public static String adminiumShovel_unlocalname = "adminiumShovel";
+	public static String adminiumShovel_name = "Adminium Shovel";
+	public static String runiumShovel_unlocalname = "runiumShovel";
+	public static String runiumShovel_name = "Runium Shovel";
+	public static String relphiteLighter_unlocalname = "relphiteLighter";
+	public static String relphiteLighter_name = "Relphite Portal Lighter";
 	//Blocks==============================================================================================
 	public static String adminiumOre_unlocalname = "adminiumOre";
 	public static String adminiumOre_name = "Adminium Ore";
@@ -60,5 +73,6 @@ public class Names {
 	public static String flour_name = "Flour";
 	public static String millStone_unlocalname = "millStone";
 	public static String millStone_name = "Mill Stone";
+	
 	
 }

@@ -2,47 +2,67 @@ package com.triniumrpg.lib;
 
 public class IDs {
 	//Items======================================================================================================
-	public static final int ItemStart = 8000;
-	public static final int goldencoin_default = ItemStart;	
+	public static int ItemStart = 8000;
+	public static final int goldencoin_default = ItemStart ++;	
 	public static int goldencoin_actual;	
-	public static final int beefStew_default = ItemStart + 1;	
+	public static final int beefStew_default = ItemStart ++;	
 	public static int beefStew_actual;
-	public static final int adminiumIngot_default = ItemStart + 2;	
+	public static final int adminiumIngot_default = ItemStart ++;	
 	public static int adminiumIngot_actual;
-	public static final int runiumIngot_default = ItemStart + 3;	
+	public static final int runiumIngot_default = ItemStart ++;	
 	public static int runiumIngot_actual;
-	public static final int relphiteDust_default = ItemStart + 4;	
+	public static final int relphiteDust_default = ItemStart ++;
 	public static int relphiteDust_actual;
-	public static final int adminiumSword_default = ItemStart + 5;	
+	public static final int adminiumSword_default = ItemStart ++;	
 	public static int adminiumSword_actual;
-	public static final int runiumSword_default = ItemStart + 6;	
+	public static final int runiumSword_default = ItemStart ++;	
 	public static int runiumSword_actual;
 	
-	public static final int liquidStone_default = ItemStart + 7;	
+	public static final int liquidStone_default = ItemStart ++;	
 	public static int liquidStone_actual;
-	public static final int holyStone_default = ItemStart + 8;	
+	public static final int holyStone_default = ItemStart ++;	
 	public static int holyStone_actual;	
-	public static final int hellStone_default = ItemStart + 9;	
+	public static final int hellStone_default = ItemStart ++;	
 	public static int hellStone_actual;	
 	
-	public static final int pot_default = ItemStart + 10;	
+	public static final int pot_default = ItemStart ++;
 	public static int pot_actual;	
-	public static final int flourPot_default = ItemStart + 11;	
+	public static final int flourPot_default = ItemStart ++;
 	public static int flourPot_actual;	
-	public static final int breadDough_default = ItemStart + 12;	
+	public static final int breadDough_default = ItemStart ++;	
 	public static int breadDough_actual;
 	
-	public static final int pestle_default = ItemStart + 13;	
+	public static final int pestle_default = ItemStart ++;
 	public static int pestle_actual;	
-	public static final int pestleMortar_default = ItemStart + 14;	
+	public static final int pestleMortar_default = ItemStart ++;
 	public static int pestleMortar_actual;	
 	
-	public static final int softClay_default = ItemStart + 15;	
+	public static final int softClay_default = ItemStart ++;	
 	public static int softClay_actual;		
-	public static final int unfPot_default = ItemStart + 16;	
+	public static final int unfPot_default = ItemStart ++;	
 	public static int unfPot_actual;	
-	public static final int flingerStaff_default = ItemStart + 17;
-	public static int flingerStaff_actual;
+	
+	public static final int runiumPickaxe_default = ItemStart++;
+	public static int runiumPickaxe_actual;
+	
+	public static final int adminiumPickaxe_default = ItemStart +20;
+	public static int adminiumPickaxe_actual;
+	
+	public static final int adminiumAxe_default = ItemStart +21;
+	public static int adminiumAxe_actual;
+	
+	public static final int runiumAxe_default = ItemStart +22;
+	public static int runiumAxe_actual;
+	
+	public static final int adminiumShovel_default = ItemStart +23;
+	public static int adminiumShovel_actual;
+	
+	public static final int runiumShovel_default = ItemStart +24;
+	public static int runiumShovel_actual;
+	
+	public static final int relphiteLighter_default = ItemStart +25;
+	public static int relphiteLighter_actual;
+	
 	
 	//Blocks======================================================================================================
 	public static final int BlockStart = 500;
@@ -58,5 +78,8 @@ public class IDs {
 	public static int millStone_actual;
 	public static final int flour_default = BlockStart + 5;	
 	public static int flour_actual;
+	
+	
+	
 	
 }

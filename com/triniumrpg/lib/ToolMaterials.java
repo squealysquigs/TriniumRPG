@@ -19,6 +19,10 @@ public class ToolMaterials {
 				
 		RUNIUMSWORD = net.minecraftforge.common.EnumHelper.addToolMaterial("RUNIUMSWORD", 5, 2500, 10F, 5, 12);
 		
+		ADMINIUMPICKAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMPICKAXE", 3, 2500, 10F, 5, 14);
+		ADMINIUMAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMAXE", 3, 2500, 10F, 5, 14);
+		ADMINIUMSHOVEL = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMSHOVEL", 3, 2500, 10F, 5, 14);
+		
 		
 	    /*
 	     * WOOD(0, 59, 2.0F, 0.0F, 15),

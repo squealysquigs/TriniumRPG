@@ -36,7 +36,7 @@ public class Blocks {
 		//Functional------------------------------------------------------------------------------------------------------------
 		relphiteFrame = new TriniumBlock(IDs.relphiteFrame_actual, Material.rock).setUnlocalizedName(Names.relphiteFrame_unlocalname).setHardness(1).setStepSound(Block.soundStoneFootstep);				
 		GameRegistry.registerBlock(relphiteFrame, relphiteFrame.getUnlocalizedName());
-		relphitePortal = new BlockRelphitePortal(252).setUnlocalizedName(Names.relphitePortal_unlocalname);
+		relphitePortal = new BlockRelphitePortal(252).setUnlocalizedName(Names.relphitePortal_unlocalname).setBlockUnbreakable();
 		GameRegistry.registerBlock(relphitePortal, relphitePortal.getUnlocalizedName());
 		millStone = (new BlockMillStone(IDs.millStone_actual)).setHardness(3.5F).setStepSound(Block.soundStoneFootstep).setUnlocalizedName(Names.millStone_unlocalname);
 		GameRegistry.registerBlock(millStone, millStone.getUnlocalizedName());

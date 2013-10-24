@@ -1,5 +1,8 @@
 package com.triniumrpg.lib;
 
+import com.triniumrpg.blocks.Blocks;
+import com.triniumrpg.items.Items;
+
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 
@@ -10,6 +13,6 @@ public class CreativeTab extends CreativeTabs {
 
 	@Override
 	public int getTabIconItemIndex() {
-		return Block.sapling.blockID;
+		return Blocks.relphiteFrame.blockID;
 	}
 }

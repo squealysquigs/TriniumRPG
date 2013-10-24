@@ -59,6 +59,7 @@ public class TriniumRPG {
 		
 		public static CreativeTab tabTrinium = new CreativeTab(CreativeTabs.getNextID(), ModInfo.NAME);
 		
+		
 		@EventHandler
 		public static void preInit(FMLPreInitializationEvent event) {
 			RecipeRemover.removeRecipe(new ItemStack(Item.bread));

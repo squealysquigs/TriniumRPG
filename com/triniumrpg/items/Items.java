@@ -31,11 +31,18 @@ public class Items {
 	public static Item runiumIngot;
 	public static Item relphiteDust;
 	public static Item adminiumSword;
+	public static Item adminiumPickaxe;
+	public static Item adminiumAxe;
+	public static Item adminiumShovel;
 	public static Item runiumSword;
+	public static Item runiumPickaxe;
+	public static Item runiumAxe;
+	public static Item runiumShovel;
 	public static Item liquidStone;
 	public static Item holyStone;
 	public static Item hellStone;
-	public static Item flingerStaff;
+	public static Item relphiteLighter;
+	
 	
 
 	public static void init() {
@@ -80,8 +87,24 @@ public class Items {
 		runiumSword = new TriniumSword(IDs.runiumSword_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.runiumSword_unlocalname);
 		GameRegistry.registerItem(runiumSword, runiumSword.getUnlocalizedName());
 		
-		flingerStaff = new TriniumStaff(IDs.flingerStaff_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.flingerStaff_unlocalname);
-		GameRegistry.registerItem(flingerStaff, flingerStaff.getUnlocalizedName());
+		adminiumPickaxe = new TriniumPickaxe(IDs.adminiumPickaxe_default, ToolMaterials.ADMINIUMPICKAXE).setUnlocalizedName(Names.adminiumPickaxe_unlocalname);
+		GameRegistry.registerItem(adminiumPickaxe, adminiumPickaxe.getUnlocalizedName());
+		runiumPickaxe = new TriniumPickaxe(IDs.runiumPickaxe_default, ToolMaterials.ADMINIUMPICKAXE).setUnlocalizedName(Names.runiumPickaxe_unlocalname);
+		GameRegistry.registerItem(runiumPickaxe, runiumPickaxe.getUnlocalizedName());
+		adminiumAxe = new TriniumAxe(IDs.adminiumAxe_default, ToolMaterials.ADMINIUMAXE).setUnlocalizedName(Names.adminiumAxe_unlocalname);
+		GameRegistry.registerItem(adminiumAxe, adminiumAxe.getUnlocalizedName());
+		runiumAxe = new TriniumAxe(IDs.runiumAxe_default, ToolMaterials.ADMINIUMAXE).setUnlocalizedName(Names.runiumAxe_unlocalname);
+		GameRegistry.registerItem(runiumAxe, runiumAxe.getUnlocalizedName());
+		adminiumShovel = new TriniumShovel(IDs.adminiumShovel_default, ToolMaterials.ADMINIUMSHOVEL).setUnlocalizedName(Names.adminiumShovel_unlocalname);
+		GameRegistry.registerItem(adminiumShovel, adminiumShovel.getUnlocalizedName());
+		runiumShovel = new TriniumShovel(IDs.runiumShovel_default, ToolMaterials.ADMINIUMSHOVEL).setUnlocalizedName(Names.runiumShovel_unlocalname);
+		GameRegistry.registerItem(runiumShovel, runiumShovel.getUnlocalizedName());
+		
+		relphiteLighter = new RelphiteLighter(IDs.relphiteLighter_default).setUnlocalizedName(Names.relphiteLighter_unlocalname);
+		
+		
+		
+		
 	}
 
 	public static void addNames() {
@@ -102,10 +125,20 @@ public class Items {
 		LanguageRegistry.addName(runiumIngot, Names.runiumIngot_name);
 		LanguageRegistry.addName(relphiteDust, Names.relphiteDust_name);
 		
+		LanguageRegistry.addName(relphiteLighter, Names.relphiteLighter_name);
+		
 		LanguageRegistry.addName(adminiumSword, Names.adminiumSword_name);
 		LanguageRegistry.addName(runiumSword, Names.runiumSword_name);
 		
-		LanguageRegistry.addName(flingerStaff, Names.flingerStaff_name);
+		LanguageRegistry.addName(adminiumPickaxe, Names.adminiumPickaxe_name);
+		LanguageRegistry.addName(runiumPickaxe, Names.runiumPickaxe_name);
+		LanguageRegistry.addName(adminiumAxe, Names.adminiumAxe_name);
+		LanguageRegistry.addName(runiumAxe, Names.runiumAxe_name);
+		LanguageRegistry.addName(adminiumShovel, Names.adminiumShovel_name);
+		LanguageRegistry.addName(runiumShovel, Names.runiumShovel_name);
+		
+		
+		
 	}
 
 	public static void addRecipes() {
@@ -128,10 +161,21 @@ public class Items {
 		GameRegistry.addRecipe(new ItemStack(adminiumSword), new Object[]{"x", "x",	"s", 'x', adminiumIngot, 's', Item.stick});		
 		GameRegistry.addRecipe(new ItemStack(runiumSword), new Object[]{"x", "x", "s", 'x', runiumIngot, 's', Item.stick});
 		
+		GameRegistry.addRecipe(new ItemStack(runiumPickaxe), new Object[]{"xxx", " s ", " s ", 'x', runiumIngot, 's', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(adminiumPickaxe), new Object[]{"xxx", " s ", " s ", 'x', adminiumIngot, 's', Item.stick});
+		
+		GameRegistry.addRecipe(new ItemStack(runiumAxe), new Object[]{"xx ", "xs ", " s ", 'x', runiumIngot, 's', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(adminiumAxe), new Object[]{"xx ", "xs ", " s ", 'x', adminiumIngot, 's', Item.stick});
+		
+		GameRegistry.addRecipe(new ItemStack(runiumShovel), new Object[]{" x ", " s ", " s ", 'x', runiumIngot, 's', Item.stick});
+		GameRegistry.addRecipe(new ItemStack(adminiumShovel), new Object[]{" x ", " s ", " s ", 'x', adminiumIngot, 's', Item.stick});
+
+		GameRegistry.addRecipe(new ItemStack(relphiteLighter), new Object[]{" x ", "xsx", " x ", 'x', Blocks.relphiteFrame, 's', Item.flintAndSteel});
+		
 		
 		FurnaceRecipes.smelting().addSmelting(softClay.itemID, 0, new ItemStack(Item.brick), 0.4F);
 		FurnaceRecipes.smelting().addSmelting(unfPot.itemID, 0, new ItemStack(pot), 0.4F);
-		FurnaceRecipes.smelting().addSmelting(breadDough.itemID, 0, new ItemStack(Item.bread), 0.4F);
+		FurnaceRecipes.smelting().addSmelting(breadDough.itemID, 0, new ItemStack(Item.bread, 2), 0.4F);
 		
 		FurnaceRecipes.smelting().addSmelting(Blocks.runiumOre.blockID, 0, new ItemStack(runiumIngot), 0.4F);
 		FurnaceRecipes.smelting().addSmelting(Blocks.adminiumOre.blockID, 0, new ItemStack(adminiumIngot), 0.3F);
