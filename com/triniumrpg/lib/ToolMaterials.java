@@ -13,6 +13,8 @@ public class ToolMaterials {
 	public static EnumToolMaterial ADMINIUMHOE;
 	public static EnumToolMaterial RUNIUMAXE;
 	public static EnumToolMaterial RUNIUMSHOVEL;
+	public static EnumToolMaterial SHICKAXE;
+	public static EnumToolMaterial USELESS;
 
 	public static void init() {
 	    ADMINIUMSWORD = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMSWORD", 3, 2000, 8F, 4, 9);
@@ -22,6 +24,10 @@ public class ToolMaterials {
 		ADMINIUMPICKAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMPICKAXE", 3, 2500, 10F, 5, 14);
 		ADMINIUMAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMAXE", 3, 2500, 10F, 5, 14);
 		ADMINIUMSHOVEL = net.minecraftforge.common.EnumHelper.addToolMaterial("ADMINIUMSHOVEL", 3, 2500, 10F, 5, 14);
+		
+		USELESS = net.minecraftforge.common.EnumHelper.addToolMaterial("USELESS", 0, 2500, 0F, 1, 14);
+		
+		SHICKAXE = net.minecraftforge.common.EnumHelper.addToolMaterial("SHICKAXE", 4, 0, 25F, 5, 14);
 		
 		
 	    /*

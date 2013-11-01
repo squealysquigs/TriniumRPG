@@ -11,13 +11,16 @@ import net.minecraft.entity.EntityList;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.MinecraftForge;
 
 import com.triniumrpg.blocks.Blocks;
 import com.triniumrpg.entities.EntityFox;
 import com.triniumrpg.entities.EntityJackO;
 import com.triniumrpg.entities.ModelFox;
 import com.triniumrpg.entities.ModelJackO;
+import com.triniumrpg.entities.OcelotDrops;
 import com.triniumrpg.entities.RenderFox;
 import com.triniumrpg.entities.RenderJackO;
 import com.triniumrpg.handlers.ConfigHandler;
@@ -67,6 +70,8 @@ public class TriniumRPG {
 			proxy.initRenderers();
 			proxy.initSounds();
 			ConfigHandler.init(event.getSuggestedConfigurationFile());
+			
+			MinecraftForge.EVENT_BUS.register(new OcelotDrops());
 		}
 
 		public static int startEntityId = 300;
@@ -85,8 +90,8 @@ public class TriniumRPG {
 			RenderingRegistry.registerEntityRenderingHandler(EntityJackO.class, new RenderJackO(new ModelJackO(), 0.3F));
 			LanguageRegistry.instance().addStringLocalization("entity.JackO.name", "Jack O' Lantern");
 		
-			EntityRegistry.registerGlobalEntityID(EntityFox.class, "Fox", 1);
-			EntityRegistry.addSpawn(EntityFox.class, 2, 2, 5, EnumCreatureType.creature);
+			EntityRegistry.registerGlobalEntityID(EntityFox.class, "Fox", ++mobID);
+			EntityRegistry.addSpawn(EntityFox.class, 5, 4, 10, EnumCreatureType.creature, BiomeGenBase.frozenRiver, BiomeGenBase.taiga, BiomeGenBase.taigaHills, BiomeGenBase.forest);
 			EntityRegistry.findGlobalUniqueEntityId();
 			RenderingRegistry.registerEntityRenderingHandler(EntityFox.class, new RenderFox(new ModelFox(), 0.3F));
 			LanguageRegistry.instance().addStringLocalization("entity.Fox.name", "Fox");
@@ -141,6 +146,8 @@ public class TriniumRPG {
 			while (EntityList.getStringFromID(startEntityId) != null);
 			return startEntityId;
 			}
+			
+			
 			
 			
 			

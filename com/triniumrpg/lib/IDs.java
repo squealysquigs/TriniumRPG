@@ -62,6 +62,17 @@ public class IDs {
 	
 	public static final int relphiteLighter_default = ItemStart +25;
 	public static int relphiteLighter_actual;
+	public static final int shadowBar_default = ItemStart +26;
+	public static int shadowBar_actual;
+	public static final int shadowShickaxe_default = ItemStart +27;
+	public static int shadowShickaxe_actual;
+	public static final int blazeCharge_default = ItemStart +28;
+	public static int blazeCharge_actual;
+	public static final int flingerStaff_default = ItemStart +29;
+	public static int flingerStaff_actual;
+	public static final int witherStaff_default = ItemStart +30;
+	public static int witherStaff_actual;
+	
 	
 	
 	//Blocks======================================================================================================
@@ -78,6 +89,11 @@ public class IDs {
 	public static int millStone_actual;
 	public static final int flour_default = BlockStart + 5;	
 	public static int flour_actual;
+	
+	
+	
+	
+	
 	
 	
 	

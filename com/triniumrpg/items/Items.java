@@ -42,6 +42,12 @@ public class Items {
 	public static Item holyStone;
 	public static Item hellStone;
 	public static Item relphiteLighter;
+	public static Item shadowBar;
+	public static Item shadowShickaxe;
+	public static Item blazeCharge;
+	public static Item flingerStaff;
+	public static Item witherStaff;
+	
 	
 	
 
@@ -65,6 +71,9 @@ public class Items {
 		breadDough = new TriniumItem(IDs.breadDough_actual).setUnlocalizedName(Names.breadDough_unlocalname);
 		GameRegistry.registerItem(breadDough, breadDough.getUnlocalizedName());
 		
+		blazeCharge = new TriniumItem(IDs.blazeCharge_default).setUnlocalizedName(Names.blazeCharge_unlocalname);
+		GameRegistry.registerItem(blazeCharge, blazeCharge.getUnlocalizedName());
+		
 		liquidStone = (new LiquidStone(IDs.liquidStone_actual, 0)).setUnlocalizedName(Names.liquidStone_unlocalname).setMaxStackSize(16).setTextureName("bucket_empty");
 		GameRegistry.registerItem(liquidStone, liquidStone.getUnlocalizedName());
 		holyStone = (new LiquidStone(IDs.holyStone_actual, Block.waterMoving.blockID)).setUnlocalizedName(Names.holyStone_unlocalname).setContainerItem(liquidStone).setTextureName("stick");
@@ -81,11 +90,18 @@ public class Items {
 		GameRegistry.registerItem(runiumIngot, runiumIngot.getUnlocalizedName());
 		relphiteDust = new TriniumItem(IDs.relphiteDust_actual).setUnlocalizedName(Names.relphiteDust_unlocalname);
 		GameRegistry.registerItem(relphiteDust, relphiteDust.getUnlocalizedName());	
+		shadowBar = new TriniumItem(IDs.shadowBar_default).setUnlocalizedName(Names.shadowBar_unlocalname);
+		GameRegistry.registerItem(shadowBar, shadowBar.getUnlocalizedName());
+		
 		
 		adminiumSword = new TriniumSword(IDs.adminiumSword_actual, ToolMaterials.ADMINIUMSWORD).setUnlocalizedName(Names.adminiumSword_unlocalname);
 		GameRegistry.registerItem(adminiumSword, adminiumSword.getUnlocalizedName());
 		runiumSword = new TriniumSword(IDs.runiumSword_actual, ToolMaterials.RUNIUMSWORD).setUnlocalizedName(Names.runiumSword_unlocalname);
 		GameRegistry.registerItem(runiumSword, runiumSword.getUnlocalizedName());
+		flingerStaff = new TriniumFireballStaff(IDs.flingerStaff_default, ToolMaterials.USELESS).setUnlocalizedName(Names.flingerStaff_unlocalname);
+		GameRegistry.registerItem(flingerStaff, flingerStaff.getUnlocalizedName());
+		witherStaff = new TriniumWitherStaff(IDs.witherStaff_default, ToolMaterials.USELESS).setUnlocalizedName(Names.witherStaff_unlocalname);
+		GameRegistry.registerItem(witherStaff, witherStaff.getUnlocalizedName());
 		
 		adminiumPickaxe = new TriniumPickaxe(IDs.adminiumPickaxe_default, ToolMaterials.ADMINIUMPICKAXE).setUnlocalizedName(Names.adminiumPickaxe_unlocalname);
 		GameRegistry.registerItem(adminiumPickaxe, adminiumPickaxe.getUnlocalizedName());
@@ -99,6 +115,10 @@ public class Items {
 		GameRegistry.registerItem(adminiumShovel, adminiumShovel.getUnlocalizedName());
 		runiumShovel = new TriniumShovel(IDs.runiumShovel_default, ToolMaterials.ADMINIUMSHOVEL).setUnlocalizedName(Names.runiumShovel_unlocalname);
 		GameRegistry.registerItem(runiumShovel, runiumShovel.getUnlocalizedName());
+		
+		shadowShickaxe = new TriniumShickaxe(IDs.shadowShickaxe_default, ToolMaterials.SHICKAXE).setUnlocalizedName(Names.shadowShickaxe_unlocalname);
+		GameRegistry.registerItem(shadowShickaxe, shadowShickaxe.getUnlocalizedName());
+		
 		
 		relphiteLighter = new RelphiteLighter(IDs.relphiteLighter_default).setUnlocalizedName(Names.relphiteLighter_unlocalname);
 		
@@ -120,15 +140,21 @@ public class Items {
 		LanguageRegistry.addName(breadDough, Names.breadDough_name);
 
 		LanguageRegistry.addName(beefStew, Names.beefStew_name);	
+		
+		LanguageRegistry.addName(blazeCharge, Names.blazeCharge_name);
 
 		LanguageRegistry.addName(adminiumIngot, Names.adminiumIngot_name);
 		LanguageRegistry.addName(runiumIngot, Names.runiumIngot_name);
 		LanguageRegistry.addName(relphiteDust, Names.relphiteDust_name);
+		LanguageRegistry.addName(shadowBar, Names.shadowBar_name);
+		LanguageRegistry.addName(shadowShickaxe, Names.shadowShickaxe_name);
 		
 		LanguageRegistry.addName(relphiteLighter, Names.relphiteLighter_name);
 		
 		LanguageRegistry.addName(adminiumSword, Names.adminiumSword_name);
 		LanguageRegistry.addName(runiumSword, Names.runiumSword_name);
+		LanguageRegistry.addName(flingerStaff, Names.flingerStaff_name);
+		LanguageRegistry.addName(witherStaff, Names.witherStaff_name);
 		
 		LanguageRegistry.addName(adminiumPickaxe, Names.adminiumPickaxe_name);
 		LanguageRegistry.addName(runiumPickaxe, Names.runiumPickaxe_name);
@@ -154,7 +180,9 @@ public class Items {
 		GameRegistry.addShapelessRecipe(new ItemStack(softClay, 6), new Object[]{new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.bucketWater)});
 		GameRegistry.addShapelessRecipe(new ItemStack(softClay, 7), new Object[]{new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.bucketWater)});
 		GameRegistry.addShapelessRecipe(new ItemStack(softClay, 8), new Object[]{new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.clay), new ItemStack(Item.bucketWater)});
-
+		GameRegistry.addShapelessRecipe(new ItemStack(shadowBar), new Object[]{new ItemStack(adminiumIngot), new ItemStack(runiumIngot)});
+		GameRegistry.addShapelessRecipe(new ItemStack(blazeCharge), new Object[]{new ItemStack(Item.blazeRod), new ItemStack(Item.blazeRod), new ItemStack(Item.blazeRod), new ItemStack(Item.blazeRod)});
+		
 		GameRegistry.addRecipe(new ItemStack(pestle), new Object[]{"II", 'I', Item.stick});
 		GameRegistry.addRecipe(new ItemStack(unfPot), new Object[]{"x x", " x ", 'x', softClay});	
 		
@@ -172,6 +200,9 @@ public class Items {
 
 		GameRegistry.addRecipe(new ItemStack(relphiteLighter), new Object[]{" x ", "xsx", " x ", 'x', Blocks.relphiteFrame, 's', Item.flintAndSteel});
 		
+		GameRegistry.addRecipe(new ItemStack(shadowShickaxe), new Object[]{"xxx", "csv", "dsz", 'x', shadowBar, 'c', runiumPickaxe, 's', Item.stick, 'v', adminiumPickaxe, 'd', runiumAxe, 'z', adminiumShovel});
+		
+		GameRegistry.addRecipe(new ItemStack(flingerStaff), new Object[]{" x ", " bx", "b  ", 'x', blazeCharge, 'b', Item.blazeRod});
 		
 		FurnaceRecipes.smelting().addSmelting(softClay.itemID, 0, new ItemStack(Item.brick), 0.4F);
 		FurnaceRecipes.smelting().addSmelting(unfPot.itemID, 0, new ItemStack(pot), 0.4F);

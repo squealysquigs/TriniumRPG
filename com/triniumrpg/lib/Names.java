@@ -54,6 +54,16 @@ public class Names {
 	public static String runiumShovel_name = "Runium Shovel";
 	public static String relphiteLighter_unlocalname = "relphiteLighter";
 	public static String relphiteLighter_name = "Relphite Portal Lighter";
+	public static String shadowBar_unlocalname = "shadowBar";
+	public static String shadowBar_name = "Shadow Bar";
+	public static String shadowShickaxe_unlocalname = "shadowShickaxe";
+	public static String shadowShickaxe_name = "Shadow Shickaxe";
+	public static String blazeCharge_unlocalname = "blazeCharge";
+	public static String blazeCharge_name = "Blaze Charge";
+	public static String flingerStaff_unlocalname = "flingerStaff";
+	public static String flingerStaff_name = "Fireball Thrower";
+	public static String witherStaff_unlocalname = "witherStaff";
+	public static String witherStaff_name = "Wither Staff";
 	//Blocks==============================================================================================
 	public static String adminiumOre_unlocalname = "adminiumOre";
 	public static String adminiumOre_name = "Adminium Ore";
